@@ -1,13 +1,21 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
-import { setupCounter } from './counter'
+import Navigo from 'navigo'
+import AdminPage from './pages/Admin'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  </div>
-`
+const router = new Navigo('/', {linksSelector: "a"})
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+type ComponentBase = {
+  render: () => string
+}
+
+const print = (component: ComponentBase, params?: any) => {
+  document.getElementById('app').innerHTML = component.render()
+}
+
+router.on({
+  "/": () => {
+    print(AdminPage)
+  },
+})
+router.resolve()
