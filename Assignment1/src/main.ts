@@ -8,11 +8,15 @@ import AddProductPage from './pages/Admin/Product/add'
 const router = new Navigo('/', {linksSelector: "a"})
 
 type ComponentBase = {
-  render: () => string
+  render: () => Promise<string>;
+  afterRender?: () => void
 }
 
-const print = (component: ComponentBase, params?: any) => {
-  document.getElementById('app').innerHTML = component.render()
+const print = async (component: ComponentBase, params?: any) => {
+  document.getElementById('app').innerHTML = await component.render()
+  if(component.afterRender) {
+    component.afterRender()
+  }
 }
 
 router.on({

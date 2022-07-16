@@ -1,4 +1,20 @@
 {
-    "users": [],
-    "products": []
+  "users": [],
+  "products": [
+    {
+      "name": "Điện thoại Samsung Galaxy A32",
+      "originalPrice": "6.490.000",
+      "id": 1
+    },
+    {
+      "name": "Điện thoại Realme C35 4GB/64GB",
+      "originalPrice": "4.290.000",
+      "id": 2
+    },
+    {
+      "name": "Điện thoại Xiaomi Redmi 10",
+      "originalPrice": "3.629.000",
+      "id": 3
+    }
+  ]
 }
