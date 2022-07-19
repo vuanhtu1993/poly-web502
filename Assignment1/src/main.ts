@@ -4,10 +4,11 @@ import Navigo from 'navigo'
 import AdminPage from './pages/Admin'
 import HomePage from './pages/Home'
 import AddProductPage from './pages/Admin/Product/add'
+import EditProductPage from './pages/Admin/Product/edit'
 
 const router = new Navigo('/', {linksSelector: "a"})
 
-type ComponentBase = {
+export type ComponentBase = {
   render: () => Promise<string>;
   afterRender?: () => void
 }
@@ -28,6 +29,9 @@ router.on({
   },
   "/admin/products/add": () => {
     print(AddProductPage)
-  }
+  },
+  "/admin/products/edit": () => {
+    print(EditProductPage)
+  },
 })
 router.resolve()
