@@ -1,4 +1,4 @@
-import {upload} from '../../../api/image'
+import {upload, uploadFile} from '../../../api/image'
 
 const EditProductPage = {
 	render: async () => {
@@ -11,18 +11,29 @@ const EditProductPage = {
 		const editFile = document.querySelector('#edit-file')
 		const editImage = document.querySelector('#edit-image')
 
-		editFile?.addEventListener('change', (event) => {
-			const file = event.target.files[0]
-			const reader = new FileReader()
-			reader.readAsDataURL(file)
-			reader.onloadend = async () => {
-				const res = await upload(reader.result)
+		editFile?.addEventListener('change', async (event) => {
+			const file: File = event.target.files[0]
+			try {
+				const res = await uploadFile(file)
 				console.log(res)
-				const data = res.data
-				editImage.src = data.url
+			} catch(err) {
+				console.log(err.message);
+				
 			}
+			// const reader = new FileReader()
+			// reader.readAsDataURL(file)
+			// reader.onloadend = async () => {
+			// 	const res = await upload(reader.result)
+			// 	console.log(res)
+			// 	const data = res.data
+			// 	editImage.src = data.url
+			// }
 		})
 	}	
 }
 
 export default EditProductPage;
+
+const logging = <T>(input: number):T => {
+	return input
+}

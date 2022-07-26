@@ -21,6 +21,33 @@
       "originalPrice": "5000000",
       "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658159778/anhhtus/eq1xvqiaaqlav4v5ylcc.jpg",
       "id": 4
+    },
+    {
+      "shortDescription": "dfafasfsf",
+      "name": "preorder-area",
+      "price": "1212",
+      "sale": "1212",
+      "feature": "fafaf",
+      "description": "fsdfdsf",
+      "id": 5
+    }
+  ],
+  "category": [
+    {
+      "name": "Điện thoại",
+      "id": "1"
+    },
+    {
+      "name": "Máy tính bảng",
+      "id": "2"
+    },
+    {
+      "name": "Laptop",
+      "id": "3"
+    },
+    {
+      "name": "Phụ kiện",
+      "id": "4"
     }
   ]
 }
