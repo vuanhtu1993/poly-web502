@@ -1,5 +1,12 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "tuva9@fpt.edu.vn",
+      "password": "$2a$10$mZGxSnU3d6QSRKjLJ7w89e0NqgIQF3unYWSrUPxeFhk1S80hqQUee",
+      "phone": "0987654321",
+      "id": 1
+    }
+  ],
   "products": [
     {
       "name": "Điện thoại Samsung Galaxy A32",
